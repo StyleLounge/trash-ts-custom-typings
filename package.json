@@ -1,7 +1,0 @@
-{
-  "name": "ts-custom-typings",
-  "main": "typings/main.d.ts",
-  "author": "Alexander Thiel <alexander.thiel@stylelounge.de>",
-  "description": "The TypeScript definition dependency manager",
-  "dependencies": {}
-}
