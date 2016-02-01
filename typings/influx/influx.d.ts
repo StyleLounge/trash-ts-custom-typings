@@ -15,6 +15,13 @@ declare module influx {
         (options:any): InfluxDB;
     }
 
+    interface Factory {
+        InfluxDB: InfluxDBStatic
+    }
+    interface InfluxDBStatic {
+        prototype: InfluxDB;
+    }
+
     export interface InfluxDB {
         setRequestTimeout(value):any;
 
