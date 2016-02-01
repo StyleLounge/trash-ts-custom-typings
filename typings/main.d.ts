@@ -1,2 +1,1 @@
-/// <reference path="typeioc/typeioc.d.ts" />
-/// <reference path="influx/influx.d.ts" />
+/// <reference path="main/definitions/native-or-bluebird/native-or-bluebird.d.ts" />

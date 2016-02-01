@@ -1,2 +1,4 @@
 /.idea
 /npm-debug.log
+/typings
+/node_modules

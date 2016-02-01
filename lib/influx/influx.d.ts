@@ -1,12 +1,6 @@
-/*---------------------------------------------------------------------------------------------------
- * Copyright (c) 2015 Maxim Gherman
- * typeioc - Dependency injection container for node typescript
- * @version v1.2.9
- * @link https://github.com/maxgherman/TypeIOC
- * @license (MIT) - https://github.com/maxgherman/TypeIOC/blob/master/LICENSE
- * --------------------------------------------------------------------------------------------------*/
+/// <reference path="../../typings/main.d.ts" />
 
-
+import {Promise} from "native-or-bluebird~es6-promise/dist/es6-promise";
 declare var influx:influx.Factory;
 
 declare module influx {
@@ -18,7 +12,7 @@ declare module influx {
     interface Factory {
         InfluxDB: InfluxDBStatic
     }
-    
+
     interface InfluxDBStatic {
         prototype: InfluxDB;
     }
@@ -83,6 +77,68 @@ declare module influx {
         getHostsAvailable():any;
 
         getHostsDisabled():any;
+    }
+
+    export interface InfluxDBAsync {
+        setRequestTimeoutAsync(value):any;
+
+        setFailoverTimeoutAsync(value):any;
+
+        urlAsync(endpoint, options, query):any;
+
+        queryDBAsync(query, options):Promise<any> ;
+
+        createDatabaseAsync(databaseName):Promise<any>;
+
+        dropDatabaseAsync(databaseName): Promise<any>;
+
+        getDatabaseNamesAsync():Promise<any>;
+
+        getSeriesNamesAsync(measurementName): Promise<any>;
+
+        getSeriesAsync(measurementName): Promise<any>;
+
+        dropMeasurementAsync(measurementName): Promise<any>;
+
+        getUsersAsync(): Promise<any>;
+
+        createUserAsync(username, password, isAdmin): Promise<any>;
+
+        setPasswordAsync(username, password): Promise<any>;
+
+        grantPrivilegeAsync(privilege, databaseName, userName): Promise<any>;
+
+        revokePrivilegeAsync(privilege, databaseName, userName): Promise<any>;
+
+        grantAdminPrivilegesAsync(userName): Promise<any>;
+
+        revokeAdminPrivilegesAsync(userName): Promise<any>;
+
+        dropUserAsync(username): Promise<any>;
+
+        writeSeriesAsync(series, options): Promise<any>;
+
+        writePointAsync(seriesName, values, tags, options): Promise<any>;
+
+        writePointsAsync(seriesName, points, options): Promise<any>;
+
+        queryAsync(databaseName, query): Promise<any>;
+
+        queryRawAsync(databaseName, query): Promise<any>;
+
+        createContinuousQueryAsync(queryName, queryString, databaseName): Promise<any>;
+
+        getContinuousQueriesAsync(): Promise<any>;
+
+        dropContinuousQueryAsync(queryName, databaseName): Promise<any>;
+
+        createRetentionPolicyAsync(rpName, databaseName, duration, replication, isDefault): Promise<any>;
+
+        getRetentionPoliciesAsync(databaseName): Promise<any>;
+
+        getHostsAvailableAsync():any;
+
+        getHostsDisabledAsync():any;
     }
 
 }

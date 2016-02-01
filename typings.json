@@ -3,5 +3,7 @@
   "main": "typings/main.d.ts",
   "author": "Alexander Thiel <alexander.thiel@stylelounge.de>",
   "description": "The TypeScript definition dependency manager",
-  "dependencies": {}
+  "dependencies": {
+    "native-or-bluebird": "github:typings/typed-native-or-bluebird#2f6bf64abda66d137016576086e9e1c0dac45469"
+  }
 }
