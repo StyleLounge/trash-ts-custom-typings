@@ -7,11 +7,15 @@
  * --------------------------------------------------------------------------------------------------*/
 
 
-declare var influx: influx.InfluxDb;
+declare var influx:influx.Factory;
 
 declare module influx {
 
-    interface InfluxDB {
+    interface Factory {
+        (options:any): InfluxDB;
+    }
+
+    export interface InfluxDB {
         setRequestTimeout(value):any;
 
         setFailoverTimeout(value):any;
