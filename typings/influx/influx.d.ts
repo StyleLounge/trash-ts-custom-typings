@@ -10,7 +10,7 @@
 declare module Influx {
 
 
-    class Client {
+    class InfluxDB {
         setRequestTimeout(value):any;
 
         setFailoverTimeout(value):any;
@@ -75,7 +75,5 @@ declare module Influx {
 }
 
 declare module "influx" {
-    export = {
-        callbacks: Typeioc
-    }
+    export = Influx.InfluxDB;
 }
