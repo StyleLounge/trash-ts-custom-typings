@@ -7,10 +7,11 @@
  * --------------------------------------------------------------------------------------------------*/
 
 
-declare module Influx {
+declare var influx: influx.InfluxDb;
 
+declare module influx {
 
-    class InfluxDB {
+    interface InfluxDB {
         setRequestTimeout(value):any;
 
         setFailoverTimeout(value):any;
@@ -75,5 +76,5 @@ declare module Influx {
 }
 
 declare module "influx" {
-    export = Influx.InfluxDB;
+    export = influx;
 }
