@@ -18,6 +18,7 @@ declare module influx {
     interface Factory {
         InfluxDB: InfluxDBStatic
     }
+    
     interface InfluxDBStatic {
         prototype: InfluxDB;
     }
