@@ -4,7 +4,7 @@ declare var influx:influx.Factory;
 
 declare module influx {
 
-    import {Promise} from "native-or-bluebird~es6-promise/dist/es6-promise";
+    import {Promise} from "native-or-bluebird~es6-promise";
 
     interface Factory {
         (options:any): InfluxDB;
@@ -80,7 +80,7 @@ declare module influx {
         getHostsDisabled():any;
     }
 
-    export interface InfluxDBAsync extends InfluxDB{
+    export interface InfluxDBAsync extends InfluxDB {
 
         //synchronous version should be used: setFailoverTimeoutAsync(value):Promise<any>;
 
