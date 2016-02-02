@@ -5,6 +5,7 @@ declare var influx:influx.Factory;
 declare module influx {
 
     import {Promise} from "native-or-bluebird~es6-promise";
+    
 
     interface Factory {
         (options:any): InfluxDB;
