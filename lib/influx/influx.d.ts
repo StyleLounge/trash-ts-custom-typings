@@ -1,10 +1,11 @@
 /// <reference path="../../typings/main.d.ts" />
 
-import {Promise} from "native-or-bluebird~es6-promise/dist/es6-promise";
 declare var influx:influx.Factory;
 
 declare module influx {
 
+    import {Promise} from "native-or-bluebird~es6-promise/dist/es6-promise";
+    
     interface Factory {
         (options:any): InfluxDB;
     }
