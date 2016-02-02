@@ -16,6 +16,14 @@ declare module influx {
         prototype: InfluxDB;
     }
 
+    interface OptionValue {
+        time: Date;
+        value: number;
+    }
+    interface WriteOptions {
+        precision?: string;//s or ms
+    }
+
     export interface InfluxDB {
         setRequestTimeout(value):any;
 
@@ -53,11 +61,11 @@ declare module influx {
 
         dropUser(username, callback):void;
 
-        writeSeries(series, options, callback):void;
+        writeSeries(series:string, options, callback):void;
+        //More types of values are allowd but at StyleLounge we stick to this
+        writePoint(seriesName:string, values:OptionValue, tags, options?:WriteOptions, callback?:(err, result) => void):void;
 
-        writePoint(seriesName, values, tags, options, callback):void;
-
-        writePoints(seriesName, points, options, callback) ;
+        writePoints(seriesName:string, points, options, callback) ;
 
         query(databaseName, query, callback):void;
 
@@ -114,11 +122,11 @@ declare module influx {
 
         dropUserAsync(username): Promise<any>;
 
-        writeSeriesAsync(series, options): Promise<any>;
+        writeSeriesAsync(series: string, options): Promise<any>;
 
-        writePointAsync(seriesName, values, tags, options): Promise<any>;
+        writePointAsync(seriesName:string, values:OptionValue, tags, options?:WriteOptions): Promise<any>;
 
-        writePointsAsync(seriesName, points, options): Promise<any>;
+        writePointsAsync(seriesName: string, points, options): Promise<any>;
 
         queryAsync(databaseName, query): Promise<any>;
 
