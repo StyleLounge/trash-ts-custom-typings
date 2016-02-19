@@ -10,8 +10,8 @@ declare module dotenv {
         path?: string;
     }
     interface IDotEnvStatic {
-        config(options?:IConfigOptions): any
-        parse(buffer:any) : any
+        config(options?:IConfigOptions): any;
+        parse(buffer:any) : any;
     }
 }
 
