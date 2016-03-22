@@ -18,7 +18,5 @@
   "license": "Unlicense",
   "homepage": "https://bitbucket.org/stylelounge/ts-custom-typings#readme",
   "devDependencies": {
-    "typescript": "^1.7.5",
-    "typings": "^0.6.2"
   }
 }
