@@ -5,15 +5,15 @@
  * Methods used by StyleLounge are added as needed. DO NOT RELY ON THIS TYPINGS' ACCURACY!
  */
 
-declare var diacritics:diacritics.IDiacriticsStatic;
+declare var elasticsearch:elasticsearch.IElasticsearchStatic;
 
-declare module diacritics {
+declare module elasticsearch {
 
-    interface IDiacriticsStatic {
-        remove:(str:string) => string;
+    interface IElasticsearchStatic {
+        Client(options:any):any;
     }
 }
 
-declare module "diacritics" {
-    export = diacritics;
+declare module "elasticsearch" {
+    export = elasticsearch;
 }
