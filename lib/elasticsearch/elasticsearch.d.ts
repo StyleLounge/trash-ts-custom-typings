@@ -5,14 +5,7 @@
  * Methods used by StyleLounge are added as needed. DO NOT RELY ON THIS TYPINGS' ACCURACY!
  */
 
-declare var elasticsearch:elasticsearch.IElasticsearchStatic;
-
-declare module elasticsearch {
-
-    interface IElasticsearchStatic {
-        Client(options:any):any;
-    }
-}
+declare var elasticsearch:any;
 
 declare module "elasticsearch" {
     export = elasticsearch;
