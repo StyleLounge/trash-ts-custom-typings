@@ -5,15 +5,8 @@
  * Methods used by StyleLounge are added as needed. DO NOT RELY ON THIS TYPINGS' ACCURACY!
  */
 
-declare var diacritics:diacritics.IDiacriticsStatic;
-
-declare module diacritics {
-
-    interface IDiacriticsStatic {
-        remove:(str:string) => string;
-    }
-}
+declare var aglio:any;
 
 declare module "aglio" {
-    export = diacritics;
+    export = aglio;
 }
