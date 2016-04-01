@@ -14,6 +14,6 @@ declare module diacritics {
     }
 }
 
-declare module "aglio" {
+declare module "diacritics" {
     export = diacritics;
 }
