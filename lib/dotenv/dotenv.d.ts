@@ -20,6 +20,6 @@ declare module dotenv {
     }
 }
 
-declare module "elasticsearch" {
+declare module "dotenv" {
     export = dotenv;
 }
