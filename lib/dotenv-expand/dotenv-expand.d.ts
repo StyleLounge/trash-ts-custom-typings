@@ -5,8 +5,8 @@
  * Methods used by StyleLounge are added as needed. DO NOT RELY ON THIS TYPINGS' ACCURACY!
  */
 
-declare var dotenvExpanded: any;
+declare var dotenvExpand: any;
 
-declare module "dotenv-expanded" {
-    export = dotenvExpanded;
+declare module "dotenv-expand" {
+    export = dotenvExpand;
 }
